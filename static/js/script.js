@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('productbody').appendChild(tr);
         }
 		
-		
+
 	
 //calculate line total by multiplying quantity and ratw	
 	function calculateLineTotal(event) {

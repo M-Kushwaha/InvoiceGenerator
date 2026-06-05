@@ -2,13 +2,14 @@
 <html>
 
 <head>
-<title>Invoice Form</title>
+<title>Basic form</title>
 <meta charset = "UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Entry Form">
 <meta name="keywords" content="Takes entry from users and submit it to server.">
 
-<!--link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}"-->
+<link rel="stylesheet" href ="styles.css">
+
 </head>
 
 <body>
@@ -16,53 +17,69 @@
     <h1>Invoice Form</h1>
     <div id="header">
         <label for="invoicenumber">Invoice Number</label>
-        <input type="number" id="invoicenumber" readonly name="invoice_number" value="Pending"/>
-        <br><br>
+        <input type="number" id="invoicenumber" readonly name="invoice_number" value="1001"/>
+        
 
         <label for="date">Date</label>
         <input type="date" id="date" required name="Date"/>
     </div>
-
+	
+	<div class="info">
     <div id="companyinfo">
         <h3>Company Information</h3>
+		
+		<div class="form-group">
         <label for="companyname">Company Name</label>
         <input type="text" id="companyname" readonly required name="company_name" value="ABC Company Pvt. Ltd."/>
-        <br><br>
-
+        </div>
+		
+		<div class="form-group">
         <label for="companyaddress">Address</label>
-        <textarea id="companyaddress" name="company_address" readonly> 254, Block-2A, Sunshine Lane, Pune, Maharashtra, India</textarea>
-        <br><br>
-
+        <textarea id="companyaddress" readonly name = "company_address"> 254, Block-2A, Sunshine Lane, Pune, Maharashtra, India</textarea>
+        </div>
+		
+		<div class="form-group">
         <label for="gst">GSTIN</label>
         <input type="text" id="gst" readonly size="40" required name="gst_number" value="AFT872100944"/>
-        <br><br> 
-
+        </div>
+		
+		
+		<div class="form-group">
         <label for="companyphone">Phone</label>
-        <input type="tel" id="companyphone" maxlength="10" readonly required name="company_phone" value="8493583002"/>
-        <br><br> 
-
+        <input type="tel" id="company_phone" maxlength="10" readonly required name="company_phone" value="8493583002"/>
+        </div>
+		
+		<div class="form-group">
         <label for="companyemail">E-mail</label>
-        <input type="email" id="companyemail" minlength="5" size="30" readonly required name="company_email" value="abccompany@yahoo.com"/>
+        <input type="email" id="company_email" minlength="5" size="30" readonly required name="company_email" value="abccompany@yahoo.com"/>
+		</div>
     </div>
 
     <div id="clientinfo">
         <h3>Client Information</h3>
+		
+		<div class="form-group">
         <label for="clientname">Client/Company Name</label>
         <input type="text" id="clientname" size="30" required name="client_name" />
-        <br><br>
-
+        </div>
+		
+		<div class="form-group">
         <label for="clientaddress">Address</label>
         <textarea id="clientaddress" required name="client_address"></textarea>
-        <br><br>
-
+		</div>
+        
+		<div class="form-group">
         <label for="clientphone">Phone</label>
         <input type="tel" id="clientphone" size="30" maxlength="10" required name="client_phone"/>
-        <br><br> 
-
+		</div>
+         
+		<div class="form-group">
         <label for="clientemail">E-mail</label>
         <input type="email" id="clientemail" minlength="5" size="30" required name="client_email" placeholder="example@gmail.com"/>
+		</div>
     </div>
-
+	</div>
+	
     <div id="productinfo">
         <h3>Product Information</h3>
         <table id="producttable" >
@@ -172,7 +189,6 @@
                 type="number" 
                 id="gsttax"
                 name="gsttax"
-                value = "0"
             />
         </td>
     </tr>
@@ -202,11 +218,11 @@
 		
     </div>
 	
+	
 	<button type="submit" id="submitbtn">Submit</button>
 	<button type="reset" id="resetbtn">Reset</button>
 </form>
-<!--script src="../static/js/script.js"></script-->
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 
 </html>
