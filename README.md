@@ -8,7 +8,7 @@ A web-based invoice generator built using Flask, MySQL, and ReportLab.
 - Store invoice data in MySQL
 - Dynamic invoice item management using JavaScript
 - Responsive frontend using HTML, CSS, and JavaScript
-- PDF invoice generation (Currently in Progress)
+- PDF invoice generation 
 
 ## Technologies Used
 
@@ -29,9 +29,10 @@ Completed:
 - Backend processing with Flask
 - MySQL database integration
 - Dynamic item handling
+- PDF Invoice generation
 
 Under Development:
-- PDF invoice generation
+- PDF preview
 - UI improvements and styling
 
 ## Installation
