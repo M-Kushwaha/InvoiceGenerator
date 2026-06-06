@@ -85,7 +85,6 @@ InvoiceGenerator/
 
 ## Future Enhancements
 
-- Download invoices as PDF
 - Improved UI/UX
 - User authentication
 
